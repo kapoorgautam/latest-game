@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /signin
+
+Allow: /
+
+Sitemap: sattalink.in/sitemap.xml

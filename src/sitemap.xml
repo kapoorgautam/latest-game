@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Landing Page -->
   <url>
-    <loc>https://lottery-mangement-system-1.onrender.com/</loc>
+    <loc>https://sattalink.in/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Admin Page (not indexed by crawlers as per robots.txt) -->
   <url>
-    <loc>https://lottery-mangement-system-1.onrender.com/admin</loc>
+    <loc>https://sattalink.in/admin</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <!-- Color Chart Page -->
   <url>
-    <loc>https://lottery-mangement-system-1.onrender.com/color-chart</loc>
+    <loc>https://sattalink.in/color-chart</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Number Chart Page -->
   <url>
-    <loc>https://lottery-mangement-system-1.onrender.com/number-chart</loc>
+    <loc>https://sattalink.in/number-chart</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <!-- Error Page (Optional) -->
   <url>
-    <loc>https://lottery-mangement-system-1.onrender.com/*</loc>
+    <loc>https://sattalink.in/error</loc>
     <changefreq>never</changefreq>
     <priority>0.1</priority>
   </url>
