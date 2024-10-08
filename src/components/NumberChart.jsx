@@ -8,7 +8,7 @@ import { translations } from "../translator/translations";
 const NumberChart = () => {
   const numberArr = JSON.parse(localStorage.getItem("numberArr")) || [];
 
-  const time =[ "Dhani ram", "Mansarovar","Sri ganesh", "Delhi bazaar", "Faridabad", "Gajiyabad", "Gali", "Disawer"];
+  const time =[ "Dhani ram", "Mansarovar", "Delhi bazaar","Sri ganesh",  "Faridabad", "Gajiyabad", "Gali", "Disawer"];
 
 
 
@@ -70,7 +70,7 @@ const NumberChart = () => {
 
 
 
-        <h1>September 2024</h1>
+        {/* <h1>September 2024</h1>
         <table className="table table-hover table-striped">
           <thead className="table-dark">
             <tr>
@@ -102,7 +102,7 @@ const NumberChart = () => {
               </tr>
             ))}
           </tbody>
-        </table>
+        </table> */}
       
       </div>
       <Footer />

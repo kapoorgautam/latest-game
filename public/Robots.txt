@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /admin
+Disallow: /signin
+Disallow: /login
+
+Allow: /
+
+Sitemap: https://lottery-mangement-system-1.onrender.com/sitemap.xml
