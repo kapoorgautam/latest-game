@@ -16,15 +16,15 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   // Time arrays
-  const time = ["4:00", "7:00", "4:30","3:10", "6:00", "8:40", "11:40", "2:00", ];
+  const time = ["4:00", "7:00","3:10", "4:30", "6:00", "8:40", "11:40", "2:00", ];
   const time2 = ["2:00 PM", "3:00 PM"];
 
   // Highlighted card names and background colors
   const cardNames = [
     "Dhani ram ",
     "Mansarovar ",
-    "Sri ganesh ",
     "Delhi bazaar ",
+    "Sri ganesh ",
     "Faridabad",
     "Gajiyabad ",
     "Gali ",

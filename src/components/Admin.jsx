@@ -52,7 +52,7 @@ const Admin = () => {
         }
     };
 
-    const time = ["result time 4:30", " result time 3:10", " result time 6:00M", " result time 8:40", "result time 11:40", "result time 2:00", " result time 4:00", " result time 7:00"];
+    const time = ["4:00", "7:00","3:10", "4:30","6:00", "8:40", "11:40", "2:00"];
     const time2 = ["2AM", "6AM"];
 
     useEffect(() => {
@@ -61,7 +61,7 @@ const Admin = () => {
 
     if (start === undefined || startcolor === undefined) return <>Loading...</>;
 
-    const numberNames = ["Dhani ram", "Mansarovar", "Sri ganesh", "Delhi bazaar", "Faridabad", "Gajiyabad", "Gali", "Disawer"];
+    const numberNames = ["Dhani ram", "Mansarovar","Delhi bazaar", "Sri ganesh",  "Faridabad", "Gajiyabad", "Gali", "Disawer"];
     const colorNames = ["Color 1 (2 PM)", "Color 2 (3 PM)"];
 
     return (
