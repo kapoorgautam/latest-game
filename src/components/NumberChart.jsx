@@ -27,11 +27,12 @@ const NumberChart = () => {
       <h1
         style={{
           textAlign: "center",
-          fontSize: "3rem",
+          fontSize: "clamp(1rem, 2.5vw, 2rem)",
           color: "white",
+
         }}
       >  {translations[language].btn2}</h1>
-      <div style={{ overflowY: "auto", textAlign: "center", }}>
+      <div style={{ overflowY: "auto", textAlign: "center", fontSize: "clamp(1rem, 2.5vw, 1.5rem)"  }}>
 
       <h1>October 2024</h1>
         <table className="table table-hover table-striped">
@@ -45,7 +46,7 @@ const NumberChart = () => {
               ))}
             </tr>
           </thead>
-          <tbody style={{ textAlign: "center", color: "white" ,fontWeight: "bold" ,}} >
+          <tbody style={{ textAlign: "center", color: "white" ,fontWeight: "bold",  fontSize: "clamp(1rem, 2.5vw, 1.5rem)" }} >
             {Array.from({
               length: arrLen-30,
             }).map((_, i) => (
@@ -70,7 +71,14 @@ const NumberChart = () => {
 
 
 
-        <h1>September 2024</h1>
+        <h1
+           style={{
+            textAlign: "center",
+            fontSize: "clamp(1rem, 2.5vw, 2rem)",
+            color: "white",
+  
+          }}
+        >September 2024</h1>
         <table className="table table-hover table-striped">
           <thead className="table-dark">
             <tr>
