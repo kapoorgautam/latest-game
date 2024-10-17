@@ -70,7 +70,7 @@ const NumberChart = () => {
 
 
 
-        {/* <h1>September 2024</h1>
+        <h1>September 2024</h1>
         <table className="table table-hover table-striped">
           <thead className="table-dark">
             <tr>
@@ -102,7 +102,11 @@ const NumberChart = () => {
               </tr>
             ))}
           </tbody>
-        </table> */}
+        </table>
+
+
+
+        
       
       </div>
       <Footer />
