@@ -27,14 +27,19 @@ const NumberChart = () => {
       <h1
         style={{
           textAlign: "center",
-          fontSize: "clamp(1rem, 2.5vw, 2rem)",
+          fontSize: "clamp(2rem, 2.5vw, 2rem)",
           color: "white",
 
         }}
       >  {translations[language].btn2}</h1>
       <div style={{ overflowY: "auto", textAlign: "center", fontSize: "clamp(1rem, 2.5vw, 1.5rem)"  }}>
 
-      <h1>October 2024</h1>
+      <h1
+        style={{
+          textAlign: "center",
+          fontSize: "clamp(1rem, 2.5vw, 2rem)",
+          color: "white",}}
+      >October 2024</h1>
         <table className="table table-hover table-striped">
           <thead className="table-dark">
             <tr>
