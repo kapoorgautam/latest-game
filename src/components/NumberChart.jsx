@@ -45,7 +45,7 @@ const NumberChart = () => {
               ))}
             </tr>
           </thead>
-          <tbody style={{ textAlign: "center", color: "white" }} >
+          <tbody style={{ textAlign: "center", color: "white" ,fontWeight: "bold" ,}} >
             {Array.from({
               length: arrLen-30,
             }).map((_, i) => (
@@ -82,7 +82,7 @@ const NumberChart = () => {
               ))}
             </tr>
           </thead>
-          <tbody style={{ textAlign: "center", color: "white" }} >
+          <tbody style={{ textAlign: "center", color: "white", fontWeight: "bold", }} >
             {Array.from({
               length: 30,
             }).map((_, i) => (
