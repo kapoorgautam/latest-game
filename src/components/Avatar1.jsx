@@ -252,7 +252,7 @@ export default function Avatar1({ info }) {
         setisBlue(true);
         setisGray(false);
         setisRed(false);
-      } else  if (col == "grey")   { 
+      } else  if (col == "white")   { 
             setisGray(false);
         setisBlue(false);
         setisRed(false);
