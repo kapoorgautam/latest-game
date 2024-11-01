@@ -1,3 +1,309 @@
+// import React from "react";
+// import Color from "./Color";
+// import Navbar from "./Navbar";
+// import Footer from "./Footer";
+// import { useLanguage } from "./LanguageContext";
+// import { translations } from "../translator/translations";
+
+// const NumberChart = () => {
+//   const numberArr = JSON.parse(localStorage.getItem("numberArr")) || [];
+
+//   const time =[ "Dhani ram", "Mansarovar", "Delhi bazaar","Sri ganesh",  "Faridabad", "Gajiyabad", "Gali", "Disawer"];
+
+
+
+//   const { language } = useLanguage();
+//   const prettifyDate = (i, parts) => {
+//     const time = new Date("09-01-2024").getTime() + i * 3600 * 24 * 1000;
+//     const date = new Date(time);
+//     const options = { month: "short", day: "numeric" };
+
+//     return date.toLocaleString("en-US", options);
+//   };
+//   const arrLen = Math.floor((numberArr?.length - 1) / 8) - 6
+//   return (
+//     <div>
+//       <Navbar />
+//       <h1
+//         style={{
+//           textAlign: "center",
+//           fontSize: "clamp(2rem, 2.5vw, 2rem)",
+//           color: "white",
+
+//         }}
+//       >  {translations[language].btn2}</h1>
+//       <div style={{ overflowY: "auto", textAlign: "center", fontSize: "clamp(1rem, 2.5vw, 1.5rem)"  }}>
+
+//       <h1
+//         style={{
+//           textAlign: "center",
+//           fontSize: "clamp(1rem, 2.5vw, 2rem)",
+//           color: "white",}}
+//       >October 2024</h1>
+//         <table className="table table-hover table-striped">
+//           <thead className="table-dark">
+//             <tr>
+//               <th scope="col">Date</th>
+//               {time.map((ele, i) => (
+//                 <th scope="col" key={i}>
+//                   {ele}
+//                 </th>
+//               ))}
+//             </tr>
+//           </thead>
+//           <tbody style={{ textAlign: "center", color: "white" ,fontWeight: "bold",  fontSize: "clamp(1rem, 2.5vw, 1.5rem)" }} >
+//             {Array.from({
+//               length: arrLen-30,
+//             }).map((_, i) => (
+//               <tr>
+//                 <td>{prettifyDate(i+30, 8)}</td>
+//                 {Array.from({ length: 8 }).map((_, ind) => {
+//                   return (
+//                     <td>
+//                       {
+//                         numberArr?.slice(53+30*8, numberArr?.length - 1)[
+//                         i * 8 + ind
+//                         ]
+//                       }
+//                     </td>
+//                   );
+//                 })}
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+
+
+
+
+//         <h1
+//            style={{
+//             textAlign: "center",
+//             fontSize: "clamp(1rem, 2.5vw, 2rem)",
+//             color: "white",
+  
+//           }}
+//         >September 2024</h1>
+//         <table className="table table-hover table-striped">
+//           <thead className="table-dark">
+//             <tr>
+//               <th scope="col">Date</th>
+//               {time.map((ele, i) => (
+//                 <th scope="col" key={i}>
+//                   {ele}
+//                 </th>
+//               ))}
+//             </tr>
+//           </thead>
+//           <tbody style={{ textAlign: "center", color: "white", fontWeight: "bold", }} >
+//             {Array.from({
+//               length: 30,
+//             }).map((_, i) => (
+//               <tr>
+//                 <td>{prettifyDate(i, 8)}</td>
+//                 {Array.from({ length: 8 }).map((_, ind) => {
+//                   return (
+//                     <td>
+//                       {
+//                         numberArr?.slice(53, numberArr?.length - 1)[
+//                         i * 8 + ind
+//                         ]
+//                       }
+//                     </td>
+//                   );
+//                 })}
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+
+
+
+        
+      
+//       </div>
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default NumberChart;
+
+
+
+// import React from "react";
+// import Color from "./Color";
+// import Navbar from "./Navbar";
+// import Footer from "./Footer";
+// import { useLanguage } from "./LanguageContext";
+// import { translations } from "../translator/translations";
+
+// const NumberChart = () => {
+//   const numberArr = JSON.parse(localStorage.getItem("numberArr")) || [];
+
+//   const time =[ "Dhani ram", "Mansarovar", "Delhi bazaar","Sri ganesh",  "Faridabad", "Gajiyabad", "Gali", "Disawer"];
+
+
+
+//   const { language } = useLanguage();
+//   const prettifyDate = (i, parts) => {
+//     const time = new Date("09-01-2024").getTime() + i * 3600 * 24 * 1000;
+//     const date = new Date(time);
+//     const options = { month: "short", day: "numeric" };
+
+//     return date.toLocaleString("en-US", options);
+//   };
+//   const arrLen = Math.floor((numberArr?.length - 1) / 8) - 6
+//   return (
+//     <div>
+//       <Navbar />
+//       <h1
+//         style={{
+//           textAlign: "center",
+//           fontSize: "clamp(2rem, 2.5vw, 2rem)",
+//           color: "white",
+
+//         }}
+//       >  {translations[language].btn2}</h1>
+//       <div style={{ overflowY: "auto", textAlign: "center", fontSize: "clamp(1rem, 2.5vw, 1.5rem)"  }}>
+
+//       <h1
+//         style={{
+//           textAlign: "center",
+//           fontSize: "clamp(1rem, 2.5vw, 2rem)",
+//           color: "white",}}
+//       >October 2024</h1>
+//         <table className="table table-hover table-striped">
+//           <thead className="table-dark">
+//             <tr>
+//               <th scope="col">Date</th>
+//               {time.map((ele, i) => (
+//                 <th scope="col" key={i}>
+//                   {ele}
+//                 </th>
+//               ))}
+//             </tr>
+//           </thead>
+//           <tbody style={{ textAlign: "center", color: "white" ,fontWeight: "bold",  fontSize: "clamp(1rem, 2.5vw, 1.5rem)" }} >
+//             {Array.from({
+//               length: arrLen-30,
+//             }).map((_, i) => (
+//               <tr>
+//                 <td>{prettifyDate(i+30, 8)}</td>
+//                 {Array.from({ length: 8 }).map((_, ind) => {
+//                   return (
+//                     <td>
+//                       {
+//                         numberArr?.slice(53+30*8, numberArr?.length - 1)[
+//                         i * 8 + ind
+//                         ]
+//                       }
+//                     </td>
+//                   );
+//                 })}
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+
+
+
+
+//         <h1
+//            style={{
+//             textAlign: "center",
+//             fontSize: "clamp(1rem, 2.5vw, 2rem)",
+//             color: "white",
+  
+//           }}
+//         >September 2024</h1>
+//         <table className="table table-hover table-striped">
+//           <thead className="table-dark">
+//             <tr>
+//               <th scope="col">Date</th>
+//               {time.map((ele, i) => (
+//                 <th scope="col" key={i}>
+//                   {ele}
+//                 </th>
+//               ))}
+//             </tr>
+//           </thead>
+//           <tbody style={{ textAlign: "center", color: "white", fontWeight: "bold", }} >
+//             {Array.from({
+//               length: 30,
+//             }).map((_, i) => (
+//               <tr>
+//                 <td>{prettifyDate(i, 8)}</td>
+//                 {Array.from({ length: 8 }).map((_, ind) => {
+//                   return (
+//                     <td>
+//                       {
+//                         numberArr?.slice(53, numberArr?.length - 1)[
+//                         i * 8 + ind
+//                         ]
+//                       }
+//                     </td>
+//                   );
+//                 })}
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+//         <h1
+//            style={{
+//             textAlign: "center",
+//             fontSize: "clamp(1rem, 2.5vw, 2rem)",
+//             color: "white",
+  
+//           }}
+//         >September 2024</h1>
+//         <table className="table table-hover table-striped">
+//           <thead className="table-dark">
+//             <tr>
+//               <th scope="col">Date</th>
+//               {time.map((ele, i) => (
+//                 <th scope="col" key={i}>
+//                   {ele}
+//                 </th>
+//               ))}
+//             </tr>
+//           </thead>
+//           <tbody style={{ textAlign: "center", color: "white", fontWeight: "bold", }} >
+//             {Array.from({
+//               length: 30,
+//             }).map((_, i) => (
+//               <tr>
+//                 <td>{prettifyDate(i, 8)}</td>
+//                 {Array.from({ length: 8 }).map((_, ind) => {
+//                   return (
+//                     <td>
+//                    {
+//   numberArr?.slice(53 + (30 + 31) * 8, numberArr?.length - 1)[
+//     i * 8 + ind
+//   ]
+// }
+//                     </td>
+//                   );
+//                 })}
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+
+
+
+        
+      
+//       </div>
+//       <Footer />
+//     </div>
+//   );
+// };
+
+// export default NumberChart;
+
+
+
 import React from "react";
 import Color from "./Color";
 import Navbar from "./Navbar";
@@ -8,11 +314,19 @@ import { translations } from "../translator/translations";
 const NumberChart = () => {
   const numberArr = JSON.parse(localStorage.getItem("numberArr")) || [];
 
-  const time =[ "Dhani ram", "Mansarovar", "Delhi bazaar","Sri ganesh",  "Faridabad", "Gajiyabad", "Gali", "Disawer"];
-
-
+  const time = [
+    "Dhani ram",
+    "Mansarovar",
+    "Delhi bazaar",
+    "Sri ganesh",
+    "Faridabad",
+    "Gajiyabad",
+    "Gali",
+    "Disawer",
+  ];
 
   const { language } = useLanguage();
+
   const prettifyDate = (i, parts) => {
     const time = new Date("09-01-2024").getTime() + i * 3600 * 24 * 1000;
     const date = new Date(time);
@@ -20,70 +334,33 @@ const NumberChart = () => {
 
     return date.toLocaleString("en-US", options);
   };
-  const arrLen = Math.floor((numberArr?.length - 1) / 8) - 6
+
+  const arrLen = Math.floor((numberArr?.length - 1) / 8) - 6;
+
   return (
     <div>
       <Navbar />
+
+
       <h1
         style={{
           textAlign: "center",
           fontSize: "clamp(2rem, 2.5vw, 2rem)",
           color: "white",
-
         }}
-      >  {translations[language].btn2}</h1>
-      <div style={{ overflowY: "auto", textAlign: "center", fontSize: "clamp(1rem, 2.5vw, 1.5rem)"  }}>
-
-      <h1
-        style={{
-          textAlign: "center",
-          fontSize: "clamp(1rem, 2.5vw, 2rem)",
-          color: "white",}}
-      >October 2024</h1>
-        <table className="table table-hover table-striped">
-          <thead className="table-dark">
-            <tr>
-              <th scope="col">Date</th>
-              {time.map((ele, i) => (
-                <th scope="col" key={i}>
-                  {ele}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody style={{ textAlign: "center", color: "white" ,fontWeight: "bold",  fontSize: "clamp(1rem, 2.5vw, 1.5rem)" }} >
-            {Array.from({
-              length: arrLen-30,
-            }).map((_, i) => (
-              <tr>
-                <td>{prettifyDate(i+30, 8)}</td>
-                {Array.from({ length: 8 }).map((_, ind) => {
-                  return (
-                    <td>
-                      {
-                        numberArr?.slice(53+30*8, numberArr?.length - 1)[
-                        i * 8 + ind
-                        ]
-                      }
-                    </td>
-                  );
-                })}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-
-
-
-
-        <h1
-           style={{
+      >
+        {translations[language].btn2}
+      </h1>
+       {/* November Section */}
+       <h1
+          style={{
             textAlign: "center",
             fontSize: "clamp(1rem, 2.5vw, 2rem)",
             color: "white",
-  
           }}
-        >September 2024</h1>
+        >
+          November 2024
+        </h1>
         <table className="table table-hover table-striped">
           <thead className="table-dark">
             <tr>
@@ -95,19 +372,31 @@ const NumberChart = () => {
               ))}
             </tr>
           </thead>
-          <tbody style={{ textAlign: "center", color: "white", fontWeight: "bold", }} >
+          <tbody
+            style={{
+              textAlign: "center",
+              color: "white",
+              fontWeight: "bold",
+            }}
+          >
             {Array.from({
-              length: 30,
+              length: arrLen - 61, // Remaining days for November
             }).map((_, i) => (
-              <tr>
-                <td>{prettifyDate(i, 8)}</td>
+              <tr key={i}>
+                <td>{prettifyDate(i + 61, 8)}</td>
                 {Array.from({ length: 8 }).map((_, ind) => {
                   return (
-                    <td>
+                    <td key={ind}>
+
+                      {/* you have change only in new month section  */}
+
+
+                      
                       {
-                        numberArr?.slice(53, numberArr?.length - 1)[
-                        i * 8 + ind
-                        ]
+                        numberArr?.slice(
+                          53 + (30 + 31) * 8,
+                          numberArr?.length - 1
+                        )[i * 8 + ind]
                       }
                     </td>
                   );
@@ -119,8 +408,116 @@ const NumberChart = () => {
 
 
 
-        
-      
+
+
+
+      <div
+        style={{
+          overflowY: "auto",
+          textAlign: "center",
+          fontSize: "clamp(1rem, 2.5vw, 1.5rem)",
+        }}
+      >
+        {/* October Section */}
+        <h1
+          style={{
+            textAlign: "center",
+            fontSize: "clamp(1rem, 2.5vw, 2rem)",
+            color: "white",
+          }}
+        >
+          October 2024
+        </h1>
+        <table className="table table-hover table-striped">
+          <thead className="table-dark">
+            <tr>
+              <th scope="col">Date</th>
+              {time.map((ele, i) => (
+                <th scope="col" key={i}>
+                  {ele}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody
+            style={{
+              textAlign: "center",
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "clamp(1rem, 2.5vw, 1.5rem)",
+            }}
+          >
+            {Array.from({
+              length: 31, // October has 31 days
+            }).map((_, i) => (
+              <tr key={i}>
+                <td>{prettifyDate(i + 30, 8)}</td>
+                {Array.from({ length: 8 }).map((_, ind) => {
+                  return (
+                    <td key={ind}>
+                      {
+                        numberArr?.slice(53 + 30 * 8, 53 + (30 + 31) * 8)[
+                          i * 8 + ind
+                        ]
+                      }
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        {/* September Section */}
+        <h1
+          style={{
+            textAlign: "center",
+            fontSize: "clamp(1rem, 2.5vw, 2rem)",
+            color: "white",
+          }}
+        >
+          September 2024
+        </h1>
+        <table className="table table-hover table-striped">
+          <thead className="table-dark">
+            <tr>
+              <th scope="col">Date</th>
+              {time.map((ele, i) => (
+                <th scope="col" key={i}>
+                  {ele}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody
+            style={{
+              textAlign: "center",
+              color: "white",
+              fontWeight: "bold",
+            }}
+          >
+            {Array.from({
+              length: 30,
+            }).map((_, i) => (
+              <tr key={i}>
+                <td>{prettifyDate(i, 8)}</td>
+                {Array.from({ length: 8 }).map((_, ind) => {
+                  return (
+                    <td key={ind}>
+                      {
+                        numberArr?.slice(53, 53 + 30 * 8)[
+                          i * 8 + ind
+                        ]
+                      }
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+       
       </div>
       <Footer />
     </div>
