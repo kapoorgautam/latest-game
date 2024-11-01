@@ -267,6 +267,81 @@ const ColorChart = () => {
           {translations[language].btn1}
         </Typography>
 
+
+
+        {/* November Table */}
+        <h1>November 2024</h1>
+        <TableContainer
+          component={Paper}
+          sx={{
+            overflowY: "auto",
+            marginTop: 1,
+            boxShadow: 3,
+          }}
+        >
+          <Table stickyHeader aria-label="color chart table">
+            <TableHead>
+              <TableRow>
+                <TableCell
+                  sx={{
+                    backgroundColor: "#32383E",
+                    color: "white",
+                    fontWeight: "bold",
+                    position: "sticky",
+                    top: 0,
+                    zIndex: 1,
+                  }}
+                >
+                  Date
+                </TableCell>
+                {time2.map((ele, i) => (
+                  <TableCell
+                    key={i}
+                    sx={{
+                      backgroundColor: "#32383E",
+                      color: "white",
+                      fontWeight: "bold",
+                      position: "sticky",
+                      top: 0,
+                      zIndex: 1,
+                    }}
+                    align="center"
+                  >
+                    {ele}
+                  </TableCell>
+                ))}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {Array.from({ length: novemberRows }).map((_, i) => (
+                <TableRow key={i}>
+                  <TableCell
+                    component="th"
+                    scope="row"
+                    sx={{ fontWeight: "bold" }}
+                  >
+                    {prettifyDate(i + 61, 4)} {/* Offset for November dates */}
+                  </TableCell>
+                  {Array.from({ length: 2 }).map((_, ind) => (
+                    <TableCell key={ind} align="center">
+                      <Color
+                        colour={
+                          colorArr.slice(40 + 61 * 4, colorArr.length - 7 - 16)[i * 4 + ind + 3]
+                        }
+                      />
+                    </TableCell>
+                  ))}
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+
+
+
+
+
+
         {/* October Table */}
         <h1>October 2024</h1>
         <TableContainer
