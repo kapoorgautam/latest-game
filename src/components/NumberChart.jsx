@@ -341,7 +341,13 @@ const NumberChart = () => {
     <div>
       <Navbar />
 
-
+      <div
+        style={{
+          overflowY: "auto",
+          textAlign: "center",
+          fontSize: "clamp(1rem, 2.5vw, 1.5rem)",
+        }}
+      >
       <h1
         style={{
           textAlign: "center",
@@ -411,13 +417,7 @@ const NumberChart = () => {
 
 
 
-      <div
-        style={{
-          overflowY: "auto",
-          textAlign: "center",
-          fontSize: "clamp(1rem, 2.5vw, 1.5rem)",
-        }}
-      >
+     
         {/* October Section */}
         <h1
           style={{
