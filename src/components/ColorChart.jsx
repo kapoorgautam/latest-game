@@ -103,7 +103,7 @@ const ColorChart = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {Array.from({ length: novemberRows -26 }).map((_, i) => (
+              {Array.from({ length: novemberRows}).map((_, i) => (
                 <TableRow key={i}>
                   <TableCell
                     component="th"
