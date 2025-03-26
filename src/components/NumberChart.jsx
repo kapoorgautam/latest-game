@@ -526,8 +526,6 @@
 
 // export default NumberChart;
 
-
-
 import React from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -550,10 +548,16 @@ const NumberChart = () => {
 
   const { language } = useLanguage();
 
-  const prettifyDate = (i) => {
-    const baseDate = new Date("09-01-2024");
-    const time = baseDate.getTime() + i * 3600 * 24 * 1000;
-    const date = new Date(time);
+  // Base date correction for alignment
+  const baseDate = new Date(2024, 8, 1); // Sept 1, 2024 (JS months are 0-indexed)
+  const today = new Date();
+
+  // Calculate the correct offset for today
+  const todayOffset = Math.floor((today - baseDate) / (1000 * 60 * 60 * 24));
+
+  const prettifyDate = (offset) => {
+    const date = new Date(baseDate);
+    date.setDate(date.getDate() + offset);
     return date.toLocaleString("en-US", { month: "short", day: "numeric" });
   };
 
@@ -567,15 +571,16 @@ const NumberChart = () => {
     { name: "March 2025", days: 31, offset: 181 },
   ];
 
-  const today = new Date();
+  // Find the current month index based on today's date
   const currentMonthIndex = months.findIndex((month) => {
-    const startDate = new Date("09-01-2024");
+    const startDate = new Date(baseDate);
     startDate.setDate(startDate.getDate() + month.offset);
     const endDate = new Date(startDate);
-    endDate.setDate(endDate.getDate() + month.days);
+    endDate.setDate(endDate.getDate() + month.days - 1);
     return today >= startDate && today <= endDate;
   });
 
+  // Reorder months so the current month appears first
   if (currentMonthIndex !== -1) {
     months = [...months.slice(currentMonthIndex), ...months.slice(0, currentMonthIndex)];
   }
@@ -601,16 +606,21 @@ const NumberChart = () => {
                 </tr>
               </thead>
               <tbody style={{ textAlign: "center", color: "white", fontWeight: "bold" }}>
-                {Array.from({ length: month.days }).map((_, i) => (
-                  <tr key={i}>
-                    <td>{prettifyDate(i + month.offset)}</td>
-                    {Array.from({ length: 8 }).map((_, ind) => (
-                      <td key={ind}>
-                        {numberArr.slice(53 + month.offset * 8, numberArr.length - 1)[i * 8 + ind]}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
+                {Array.from({ length: month.days }).map((_, i) => {
+                  const currentDate = prettifyDate(i + month.offset);
+                  const isToday = todayOffset === i + month.offset;
+                  
+                  return (
+                    <tr key={i} style={{ backgroundColor: isToday ? "#FFD700" : "transparent" }}>
+                      <td>{currentDate}</td>
+                      {Array.from({ length: 8 }).map((_, ind) => (
+                        <td key={ind}>
+                          {numberArr[53 + (i + month.offset - 2) * 8 + ind] || "-"}
+                        </td>
+                      ))}
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>
