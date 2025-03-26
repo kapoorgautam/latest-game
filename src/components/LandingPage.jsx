@@ -76,7 +76,7 @@ const LandingPage = () => {
           sx={{ maxWidth: "1200px", margin: "0 auto" }}
         >
           {/* Blinking Text */}
-          <Box className="text-container" textAlign="center">
+          {/* <Box className="text-container" textAlign="center">
             {[...Array(3)].map((_, idx) => (
               <Typography
                 key={idx}
@@ -89,7 +89,7 @@ const LandingPage = () => {
                 <span style={{ color: "yellow" }}>{translations[language].logo}</span>
               </Typography>
             ))}
-          </Box>
+          </Box> */}
 
           {/* Number Results Section */}
           <Box className="number-results" width="100%">
